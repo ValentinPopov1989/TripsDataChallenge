@@ -39,7 +39,7 @@ def question2(connIn,denormData=None):
 
 
 def question3(connIn,denormData=None):
-    print("Show the users in west Netherlands who travelled the most by bike (in terms of kms) to go to work.")
+    print("Taking the top 8 users above 35 years old who travel the most km by bike, show the 3 least common motives of travel in year 2022")
     if(denormData is None):
         trips_denorm=md.read_fromDB(connIn)
     else:
@@ -74,7 +74,7 @@ def question3(connIn,denormData=None):
 
 
 def question4(connIn,denormData=None):
-    print("Show the users in west Netherlands who travelled the most by bike (in terms of kms) to go to work.")
+    print("Taking the top 10 people who took the least number of kms to atend education/courses, show for every year the average number of trips made by these users.")
     if(denormData is None):
         trips_denorm=md.read_fromDB(connIn)
     else:
