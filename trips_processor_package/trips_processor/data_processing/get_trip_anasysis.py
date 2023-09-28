@@ -59,7 +59,7 @@ def question3(connIn,denormData=None):
         .sort_values(['Tot_Km'], ascending=False) \
         .head(8)
 
-    bike_trips = trips_denorm[trips_denorm['mode'] == "Bike"]
+    bike_trips = trips_denorm[(trips_denorm['Periods'] == "2022")]
     bike_trips = bike_trips.groupby(['UserId', 'motive'])['Trip in a year']\
         .sum().reset_index(name="tot_trips")\
         .sort_values(['UserId', 'tot_trips'], ascending=True)
