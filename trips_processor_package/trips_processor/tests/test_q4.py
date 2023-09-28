@@ -2,7 +2,7 @@ from trips_processor.data_processing import get_trip_anasysis as ta
 from sqlalchemy import create_engine
 import os
 
-def test_q2():
+def test_q4():
     res_dir = r'C:\Users\Valentin Popov\conda_projects\res'
     db_user = 'postgres'
     db_pwd = 'root'
@@ -15,10 +15,10 @@ def test_q2():
     # conect to DB
     connIn = create_engine(out_connection_str)
 
-    res = ta.question2(connIn)
+    res = ta.question4(connIn)
     print(res.shape)
-    res.to_csv(os.path.join(res_dir, 'q2.csv'), index=False, encoding='utf-8')
+    res.to_csv(os.path.join(res_dir, 'q4.csv'), index=False, encoding='utf-8')
 
 
 if __name__ == '__main__':
-    test_q2()
+    test_q4()
