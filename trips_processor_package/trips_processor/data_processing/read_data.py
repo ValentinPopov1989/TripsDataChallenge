@@ -1,7 +1,6 @@
 import os
 import pandas as pd
 import csv
-from sqlalchemy import create_engine
 
 
 def getDelimiter(filename, encoding):

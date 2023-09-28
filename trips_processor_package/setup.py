@@ -11,12 +11,12 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 setup(
-    name='recommender',
-    description='recommender',
+    name='trips-processor',
+    description='trips-processor',
     author='ValentinPopov',
     # Where is the source code:
     package_dir = {'' : '.'}, #this directory
 
     # Include all packages you find under exercise:
-    packages=find_packages(where='.',include='trip_processor/*')
+    packages=find_packages(where='.',include='trips_processor/*')
 )

@@ -1,9 +1,15 @@
 # TripsDataChallenge
 data challenge
 
+
+install libraries
+
+python3 -m pip install pandas sqlalchemy psycopg2
+
+
 1.
 to install in developer mode: 
-in the parent directory ‘worksite_first_package', run:
+in the parent directory ‘trips_processor_package', run:
 pip install -e ./
 
 2.
@@ -11,7 +17,7 @@ change the path of the data file:
 
 3.
 for a generic run: 
-from the directory worksite_first_package: 
+from the directory trips_processor_package: 
 run the command: 
 > python trips_processor
 to run the code in the main module: a trips_processor for a chosen product (this runs the functions in NAME.py) 
