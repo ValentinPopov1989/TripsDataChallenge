@@ -3,8 +3,16 @@
 ### Run with docker 
 
 #####Requiremnts:
+docker
 
-
+1) Download a solution from github 
+https://github.com/ValentinPopov1989/TripsDataChallenge
+2) build docker images app and postgres and run in
+> cd TripsDataChallenge
+> 
+> docker-compose up --build
+3) Will be executed a **complete test** of solution packege and result files will be prodused in **TripsDataChallenge\results**
+4) Open a dashboard.pbix and  in transform data tab modify **FilePath** parameter with current folder path. This will allow you to refresh sources files for visualization
 
 
 ### Run without docker 
@@ -25,7 +33,7 @@ git, python, pip, PowerBI, postres, jupyther
 4) A **complete test** of a solution package can be done:
    > python3 .\trips_processor_package\trips_processor,
    > 
-   > after this run resul files will be prodused in **TripsDataChallenge\results**
+   > after this run result files will be prodused in **TripsDataChallenge\results**
 5) Or single test 
    >python3 .\trips_processor_package\trips_processor\tests\test_q1.py
 
