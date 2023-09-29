@@ -10,24 +10,16 @@ git, python, pip, PowerBI, postres, jupyther
     2) cd TripsDataChallenge
 2) install libraries and package with solution
    1) python3 -m pip install pandas sqlalchemy psycopg2 python-dotenv
-   2) python3 .\trips_processor_package\trips_processor
-3) An instance of database Postgres is running and database exists as in .env
-4) PowerBI is installed and working properly,in transform data tab modify **FilePath** parameter with current folder path. This will allow you to refresh sources files for visualization 
-5) 
+   2) python3 -m pip install -e .\trips_processor_package\
+3) An instance of database Postgres is running as in .env 
+   1) CREATE DATABASE trips_challenge ; 
+4) A **complete test** of a solution package can be done:
+   1) python3 .\trips_processor_package\trips_processor, after this run resul files will be prodused in **TripsDataChallenge\results**
+5) Or single test python3 .\trips_processor_package\trips_processor\tests\test_q1.py
 
-install libraries
+6) Open a dashboard.pbix and  in transform data tab modify **FilePath** parameter with current folder path. This will allow you to refresh sources files for visualization
 
 
-
-python3 -m pip install pandas sqlalchemy psycopg2 python-dotenv
-
-install package  
-
-python3 -m pip install -e .\trips_processor_package\
-
-run package with all tests 
-
-python3 .\trips_processor_package\trips_processor
 
 
 
