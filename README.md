@@ -2,10 +2,10 @@
 
 ### Run with docker 
 
-#####Requiremnts:
+**Requiremnts**:
 docker
 
-1) Download a solution from github 
+1) Download a solution from github main branch 
 https://github.com/ValentinPopov1989/TripsDataChallenge
 2) build docker images app and postgres and run in
 > cd TripsDataChallenge
@@ -17,7 +17,7 @@ https://github.com/ValentinPopov1989/TripsDataChallenge
 
 ### Run without docker 
 
-#####Requiremnts:
+**Requiremnts**:
 git, python, pip, PowerBI, postres, jupyther 
 
 1) Open terminal/powershell end clone a repository (main branch used as production):
