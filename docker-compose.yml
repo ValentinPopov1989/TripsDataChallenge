@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    volumes:
+      - "./results/:/code/results"
+  db:
+    build: ./database/
+
+
+networks:
+  default:
+    name: trips-network

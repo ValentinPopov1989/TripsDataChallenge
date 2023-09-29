@@ -1,5 +1,12 @@
 # TripsDataChallenge
 
+### Run with docker 
+
+#####Requiremnts:
+
+
+
+
 ### Run without docker 
 
 #####Requiremnts:
