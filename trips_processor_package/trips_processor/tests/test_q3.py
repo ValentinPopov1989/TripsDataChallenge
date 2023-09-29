@@ -1,14 +1,21 @@
 from trips_processor.data_processing import get_trip_anasysis as ta
 from sqlalchemy import create_engine
 import os
+from dotenv import load_dotenv
 
 def test_q3():
-    res_dir = r'C:\Users\Valentin Popov\conda_projects\res'
-    db_user = 'postgres'
-    db_pwd = 'root'
-    db_name = 'trips_challenge'
-    db_host = 'localhost'
-    db_port = '5433'
+    load_dotenv()
+
+    db_user = os.getenv("DB_USER")
+    db_pwd = os.getenv("DB_PWD")
+    db_name = os.getenv("DB_NAME")
+    db_host = os.getenv("DB_HOST")
+    db_port = os.getenv("DB_PORT")
+    res_dir = os.getenv("RESULT_DIR")
+
+    if not os.path.exists(res_dir):
+        os.makedirs(res_dir)
+        print("created folder", res_dir)
 
     # dialect+driver://username:password@host:port/database
     out_connection_str = "postgresql+psycopg2://" + db_user + ":" + db_pwd + "@" + db_host + ":" + db_port + "/" + db_name

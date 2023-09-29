@@ -1,3 +1,6 @@
+from trips_processor.tests import test_all as ta
 
 
-print("Loading data into postgres @")
+
+if __name__ == '__main__':
+    ta.test_all()

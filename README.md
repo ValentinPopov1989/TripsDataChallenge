@@ -4,7 +4,22 @@ data challenge
 
 install libraries
 
-python3 -m pip install pandas sqlalchemy psycopg2
+python3 -m pip install pandas sqlalchemy psycopg2 python-dotenv
+
+install package  
+
+python3 -m pip install -e .\trips_processor_package\
+
+run package with all tests 
+
+python3 .\trips_processor_package\trips_processor
+
+
+
+
+
+
+
 
 
 1.
