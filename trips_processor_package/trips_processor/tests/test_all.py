@@ -1,5 +1,8 @@
 from trips_processor.data_processing import get_trip_anasysis as ta
 from trips_processor.data_processing import manipulate_data as md
+from trips_processor.data_processing import read_data as rd
+
+
 from sqlalchemy import create_engine
 import os
 from dotenv import load_dotenv
@@ -13,6 +16,8 @@ def test_all():
     db_host = os.getenv("DB_HOST")
     db_port = os.getenv("DB_PORT")
     res_dir = os.getenv("RESULT_DIR")
+    dir_path = os.getenv("DATA_DIR")
+
 
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)
@@ -22,6 +27,10 @@ def test_all():
     out_connection_str = "postgresql+psycopg2://" + db_user + ":" + db_pwd + "@" + db_host + ":" + db_port + "/" + db_name
     # conect to DB
     connIn = create_engine(out_connection_str)
+
+    #first load data
+    rd.readFiles(dir_path, connIn)
+    #then trasform it
     trips_denorm = md.read_fromDB(connIn)
 
 

@@ -5,14 +5,19 @@
 #####Requiremnts:
 git, python, pip, PowerBI, postres, jupyther 
 
-1) Crate an empty folder and clone a repository, open terminal inside it and execute:
+1) Open terminal/powershell end clone a repository:
     1) git clone https://github.com/ValentinPopov1989/TripsDataChallenge.git
     2) cd TripsDataChallenge
-2) An instance of database Postgres is running and database exists as in .env
-3) PowerBI is installed and working properly,in transform data tab modify **FilePath** parameter with current folder path. This will allow you to refresh sources files for visualization 
-4) 
+2) install libraries and package with solution
+   1) python3 -m pip install pandas sqlalchemy psycopg2 python-dotenv
+   2) python3 .\trips_processor_package\trips_processor
+3) An instance of database Postgres is running and database exists as in .env
+4) PowerBI is installed and working properly,in transform data tab modify **FilePath** parameter with current folder path. This will allow you to refresh sources files for visualization 
+5) 
 
 install libraries
+
+
 
 python3 -m pip install pandas sqlalchemy psycopg2 python-dotenv
 
