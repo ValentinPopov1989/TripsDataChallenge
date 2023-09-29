@@ -1,6 +1,16 @@
 # TripsDataChallenge
-data challenge
 
+### Run without docker using venv
+
+#####Requiremnts:
+git, python, pip, PowerBI, postres, jupyther 
+
+1) Crate an empty folder and clone a repository, open terminal inside it and execute:
+    1) git clone https://github.com/ValentinPopov1989/TripsDataChallenge.git
+    2) cd TripsDataChallenge
+2) An instance of database Postgres is running and database exists as in .env
+3) PowerBI is installed and working properly,in transform data tab modify **FilePath** parameter with current folder path. This will allow you to refresh sources files for visualization 
+4) 
 
 install libraries
 
